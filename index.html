@@ -68,7 +68,6 @@ input{font:inherit;color:inherit}
 
 .page{display:none}.page.active{display:block}
 
-/* NEXT SCRIM BANNER */
 .scrim-banner{background:linear-gradient(135deg,rgba(249,105,40,.15) 0%,rgba(249,105,40,.04) 100%);border:1px solid rgba(249,105,40,.35);border-radius:var(--r-xl);padding:1.25rem 1.5rem;margin-bottom:1.75rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
 .scrim-left{display:flex;align-items:center;gap:1rem}
 .scrim-icon{width:42px;height:42px;border-radius:var(--r-lg);background:var(--color-orange-hl);border:1px solid rgba(249,105,40,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--color-orange)}
@@ -82,7 +81,6 @@ input{font:inherit;color:inherit}
 .timer-sep{font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--txt-f);margin-bottom:.3rem}
 .scrim-over{font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--ok);letter-spacing:.05em}
 
-/* LOGIN */
 .login-outer{min-height:100dvh;display:flex;align-items:center;justify-content:center;padding:2rem;background:var(--bg)}
 .login-card{background:var(--surf);border:1px solid var(--bord);border-radius:var(--r-xl);padding:2.5rem;width:100%;max-width:400px;box-shadow:var(--sh-md)}
 .login-logo{text-align:center;margin-bottom:2rem}
@@ -146,14 +144,23 @@ input{font:inherit;color:inherit}
 .adm-badge{display:inline-flex;align-items:center;gap:.3rem;background:var(--color-orange-hl);color:var(--color-orange);border:1px solid rgba(249,105,40,.3);border-radius:var(--r-full);padding:.22rem .7rem;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
 .adm-actions{display:flex;gap:.65rem;align-items:center;flex-wrap:wrap}
 
-/* ADMIN SCRIM EDITOR */
-.scrim-editor{background:var(--surf);border:1px solid rgba(249,105,40,.3);border-radius:var(--r-xl);padding:1.25rem 1.5rem;margin-bottom:2rem}
+.scrim-editor{background:var(--surf);border:1px solid rgba(249,105,40,.3);border-radius:var(--r-xl);padding:1.25rem 1.5rem;margin-bottom:1.5rem}
 .scrim-editor-title{font-family:var(--font-display);font-size:1rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--color-orange);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
 .scrim-editor-row{display:flex;align-items:flex-end;gap:1rem;flex-wrap:wrap}
 .scrim-editor-fg{display:flex;flex-direction:column;gap:.4rem}
 .scrim-editor-label{font-size:.7rem;font-weight:600;color:var(--txt-m);letter-spacing:.05em;text-transform:uppercase}
 .scrim-editor-input{padding:.5rem .8rem;background:var(--surf-off);border:1px solid var(--bord);border-radius:var(--r-md);font-size:.88rem;color:var(--txt);transition:border-color var(--tr)}
 .scrim-editor-input:focus{outline:none;border-color:var(--color-orange)}
+
+/* LOBBY SIZE EDITOR */
+.lobby-size-editor{background:var(--surf);border:1px solid var(--bord);border-radius:var(--r-xl);padding:1.25rem 1.5rem;margin-bottom:2rem}
+.lobby-size-title{font-family:var(--font-display);font-size:1rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--txt-m);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+.lobby-size-row{display:flex;align-items:flex-end;gap:1.5rem;flex-wrap:wrap}
+.lobby-size-fg{display:flex;flex-direction:column;gap:.4rem}
+.lobby-size-label{font-size:.7rem;font-weight:600;color:var(--txt-m);letter-spacing:.05em;text-transform:uppercase}
+.lobby-size-inp{width:90px;padding:.5rem .8rem;background:var(--surf-off);border:1px solid var(--bord);border-radius:var(--r-md);font-size:.95rem;font-family:var(--font-display);font-weight:700;color:var(--txt);transition:border-color var(--tr);text-align:center}
+.lobby-size-inp:focus{outline:none;border-color:var(--color-orange)}
+.lobby-size-hint{font-size:.72rem;color:var(--txt-f);margin-top:.6rem}
 
 .egrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:.85rem}
 .ecard{background:var(--surf);border:1px solid var(--bord);border-radius:var(--r-lg);overflow:hidden;transition:border-color var(--tr),box-shadow var(--tr)}
@@ -196,7 +203,6 @@ input{font:inherit;color:inherit}
   <div class="loader-txt">Connexion Firebase…</div>
 </div>
 
-<!-- HEADER PUBLIC -->
 <header class="hdr" id="hdrPublic">
   <div class="logo">
     <img src="asc_x_pubg_horizontal.jpg" alt="Ascension × PUBG"
@@ -211,7 +217,6 @@ input{font:inherit;color:inherit}
   </div>
 </header>
 
-<!-- HEADER ADMIN -->
 <header class="hdr" id="hdrAdmin" style="display:none">
   <div class="logo" onclick="goPublic()" style="cursor:pointer">
     <img src="asc_x_pubg_horizontal.jpg" alt="Ascension × PUBG"
@@ -229,16 +234,14 @@ input{font:inherit;color:inherit}
   </div>
 </header>
 
-<!-- PAGE : PUBLIQUE -->
+<!-- PAGE PUBLIQUE -->
 <div class="page active" id="pg-public">
   <div class="pub-wrap">
-
     <div class="hero">
       <div class="hero-title" id="heroTitle">Inscriptions <em>SCRIM PUBG</em></div>
       <div class="hero-sub" id="heroSub">Consulte les équipes inscrites dans chaque lobby. Pour t'inscrire, envoie tes pseudos dans le Discord.</div>
     </div>
 
-    <!-- PROCHAIN SCRIM BANNER -->
     <div class="scrim-banner" id="scrimBanner">
       <div class="scrim-left">
         <div class="scrim-icon">
@@ -292,7 +295,7 @@ input{font:inherit;color:inherit}
   </div>
 </div>
 
-<!-- PAGE : LOGIN ADMIN -->
+<!-- PAGE LOGIN ADMIN -->
 <div class="page" id="pg-adminlogin">
   <div class="login-outer">
     <div class="login-card">
@@ -326,7 +329,7 @@ input{font:inherit;color:inherit}
   </div>
 </div>
 
-<!-- PAGE : ADMIN -->
+<!-- PAGE ADMIN -->
 <div class="page" id="pg-admin">
   <div class="adm-wrap">
     <div class="adm-top">
@@ -373,6 +376,29 @@ input{font:inherit;color:inherit}
       <div style="margin-top:.75rem;font-size:.75rem;color:var(--txt-f)" id="scrimEditorPreview"></div>
     </div>
 
+    <!-- ÉDITEUR TAILLE LOBBYS -->
+    <div class="lobby-size-editor">
+      <div class="lobby-size-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        Nombre d'équipes par lobby
+      </div>
+      <div class="lobby-size-row">
+        <div class="lobby-size-fg">
+          <label class="lobby-size-label">Lobby 1</label>
+          <input class="lobby-size-inp" type="number" id="sizeL1" min="1" max="100" value="32">
+        </div>
+        <div class="lobby-size-fg">
+          <label class="lobby-size-label">Lobby 2</label>
+          <input class="lobby-size-inp" type="number" id="sizeL2" min="1" max="100" value="32">
+        </div>
+        <button class="btn btn-primary btn-sm" onclick="saveLobbySize()">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          Appliquer
+        </button>
+      </div>
+      <div class="lobby-size-hint">Modifie le nombre de cases affichées dans chaque lobby (public + admin). Les données existantes ne sont pas supprimées.</div>
+    </div>
+
     <div class="tabs">
       <button class="tab-btn active" data-tab="adm1">Lobby 1</button>
       <button class="tab-btn" data-tab="adm2">Lobby 2</button>
@@ -404,7 +430,7 @@ input{font:inherit;color:inherit}
 
 <script type="module">
 import { initializeApp }    from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
-import { getFirestore, doc, setDoc, getDoc, onSnapshot, writeBatch }
+import { getFirestore, doc, setDoc, onSnapshot, writeBatch }
   from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
 
 const FB = {
@@ -421,7 +447,36 @@ const db  = getFirestore(app);
 const UNAME = atob('QWRtaW5Bc2NlbnNpb24yOTQyMCE=');
 const UPASS = atob('QVNDMjM0PyNBU0M=');
 
-/* ═══════════ i18n ═══════════ */
+/* ═══════ LOBBY SIZES (stockées dans Firebase config/lobbies) ═══════ */
+const lobbySize = { 1: 32, 2: 32 };
+
+function listenLobbySize() {
+  onSnapshot(doc(db,'config','lobbies'), snap => {
+    const d = snap.exists() ? snap.data() : {};
+    lobbySize[1] = d.size1 || 32;
+    lobbySize[2] = d.size2 || 32;
+    const i1 = document.getElementById('sizeL1');
+    const i2 = document.getElementById('sizeL2');
+    if(i1) i1.value = lobbySize[1];
+    if(i2) i2.value = lobbySize[2];
+    [1,2].forEach(lb => {
+      renderPublicLobby(lb);
+      if(document.getElementById('pg-admin').classList.contains('active')) renderAdminLobby(lb);
+    });
+  });
+}
+
+window.saveLobbySize = async function() {
+  const v1 = parseInt(document.getElementById('sizeL1').value);
+  const v2 = parseInt(document.getElementById('sizeL2').value);
+  if(isNaN(v1)||v1<1||isNaN(v2)||v2<1){ toast('Valeurs invalides','fail'); return; }
+  try {
+    await setDoc(doc(db,'config','lobbies'),{size1:v1,size2:v2},{merge:true});
+    toast(`✓ Lobby 1 : ${v1} équipes · Lobby 2 : ${v2} équipes`,'ok');
+  } catch { toast('✗ Erreur réseau','fail'); }
+};
+
+/* ═══════ i18n ═══════ */
 let lang = 'fr';
 const T = {
   fr: {
@@ -450,11 +505,11 @@ const T = {
 function t(k){ return T[lang][k]||k; }
 
 function applyTranslations(){
-  document.getElementById('heroTitle').innerHTML   = t('heroTitle');
-  document.getElementById('heroSub').textContent   = t('heroSub');
+  document.getElementById('heroTitle').innerHTML      = t('heroTitle');
+  document.getElementById('heroSub').textContent      = t('heroSub');
   document.getElementById('discordTitle').textContent = t('discordTitle');
-  document.getElementById('discordDesc').innerHTML = t('discordDesc');
-  document.getElementById('scrimLabel').textContent = t('scrimLabel');
+  document.getElementById('discordDesc').innerHTML    = t('discordDesc');
+  document.getElementById('scrimLabel').textContent   = t('scrimLabel');
   document.getElementById('tLblH').textContent = t('lblH');
   document.getElementById('tLblM').textContent = t('lblM');
   document.getElementById('tLblS').textContent = t('lblS');
@@ -465,15 +520,15 @@ window.toggleLang = function(){
   document.getElementById('langBtn').textContent = lang==='fr'?'🇬🇧 EN':'🇫🇷 FR';
   applyTranslations();
   [1,2].forEach(lb=>renderPublicLobby(lb));
-  // Reforater la date du scrim dans la bonne langue
   if(scrimTimestamp){
     const opts = {weekday:'long',day:'2-digit',month:'long',year:'numeric',hour:'2-digit',minute:'2-digit',timeZone:'Europe/Paris'};
     const locale = lang==='fr'?'fr-FR':'en-GB';
     document.getElementById('scrimDateTxt').textContent = new Intl.DateTimeFormat(locale, opts).format(new Date(scrimTimestamp)) + ' (CEST)';
   }
 };
-/* ═══════════ TIMER ═══════════ */
-let scrimTimestamp = null; // ms UTC
+
+/* ═══════ TIMER ═══════ */
+let scrimTimestamp = null;
 let timerInterval  = null;
 
 function startTimer(){
@@ -483,44 +538,32 @@ function startTimer(){
 }
 
 function tickTimer(){
-  if(!scrimTimestamp){ document.getElementById('scrimDateTxt').textContent = '—'; return; }
-  const now  = Date.now();
-  const diff = scrimTimestamp - now;
-
+  if(!scrimTimestamp){ document.getElementById('scrimDateTxt').textContent='—'; return; }
+  const diff = scrimTimestamp - Date.now();
   if(diff <= 0){
-    document.getElementById('timerBlock').innerHTML = `<span class="scrim-over">${t('scrimOver')}</span>`;
+    document.getElementById('timerBlock').innerHTML=`<span class="scrim-over">${t('scrimOver')}</span>`;
     return;
   }
-
-  const totalSec = Math.floor(diff/1000);
-  const h  = Math.floor(totalSec/3600);
-  const m  = Math.floor((totalSec%3600)/60);
-  const s  = totalSec%60;
-  document.getElementById('tH').textContent = String(h).padStart(2,'0');
-  document.getElementById('tM').textContent = String(m).padStart(2,'0');
-  document.getElementById('tS').textContent = String(s).padStart(2,'0');
-  document.getElementById('tLblH').textContent = t('lblH');
-  document.getElementById('tLblM').textContent = t('lblM');
-  document.getElementById('tLblS').textContent = t('lblS');
+  const totalSec=Math.floor(diff/1000);
+  const h=Math.floor(totalSec/3600),m=Math.floor((totalSec%3600)/60),s=totalSec%60;
+  document.getElementById('tH').textContent=String(h).padStart(2,'0');
+  document.getElementById('tM').textContent=String(m).padStart(2,'0');
+  document.getElementById('tS').textContent=String(s).padStart(2,'0');
+  document.getElementById('tLblH').textContent=t('lblH');
+  document.getElementById('tLblM').textContent=t('lblM');
+  document.getElementById('tLblS').textContent=t('lblS');
 }
 
 function setScrimDisplay(isoStr){
   if(!isoStr){ scrimTimestamp=null; document.getElementById('scrimDateTxt').textContent='—'; return; }
-  // isoStr format: "2026-04-09T20:15" treated as Europe/Paris (CEST = UTC+2)
-  const [datePart, timePart] = isoStr.split('T');
-  const [y,mo,d] = datePart.split('-').map(Number);
-  const [hh,mm]  = timePart.split(':').map(Number);
-  // Build UTC timestamp: CEST = UTC+2
-  scrimTimestamp = Date.UTC(y, mo-1, d, hh-2, mm, 0);
-
-  // Display
-  const opts = { weekday:'long', day:'2-digit', month:'long', year:'numeric', hour:'2-digit', minute:'2-digit', timeZone:'Europe/Paris' };
-  const locale = lang==='fr'?'fr-FR':'en-GB';
-  const formatted = new Intl.DateTimeFormat(locale, opts).format(new Date(scrimTimestamp));
-  document.getElementById('scrimDateTxt').textContent = formatted + ' (CEST)';
-
-  // Reset timer display in case it showed "live"
-  document.getElementById('timerBlock').innerHTML = `
+  const [datePart,timePart]=isoStr.split('T');
+  const [y,mo,d]=datePart.split('-').map(Number);
+  const [hh,mm]=timePart.split(':').map(Number);
+  scrimTimestamp=Date.UTC(y,mo-1,d,hh-2,mm,0);
+  const opts={weekday:'long',day:'2-digit',month:'long',year:'numeric',hour:'2-digit',minute:'2-digit',timeZone:'Europe/Paris'};
+  const locale=lang==='fr'?'fr-FR':'en-GB';
+  document.getElementById('scrimDateTxt').textContent=new Intl.DateTimeFormat(locale,opts).format(new Date(scrimTimestamp))+' (CEST)';
+  document.getElementById('timerBlock').innerHTML=`
     <div class="timer-unit"><span class="timer-num" id="tH">00</span><span class="timer-lbl" id="tLblH">${t('lblH')}</span></div>
     <span class="timer-sep">:</span>
     <div class="timer-unit"><span class="timer-num" id="tM">00</span><span class="timer-lbl" id="tLblM">${t('lblM')}</span></div>
@@ -529,54 +572,44 @@ function setScrimDisplay(isoStr){
   startTimer();
 }
 
-/* ═══════════ FIREBASE SCRIM DATE ═══════════ */
 function listenScrimDate(){
-  onSnapshot(doc(db,'config','scrim'), snap=>{
-    const data = snap.exists()?snap.data():{};
-    const iso  = data.datetime || '2026-04-09T20:15';
+  onSnapshot(doc(db,'config','scrim'),snap=>{
+    const data=snap.exists()?snap.data():{};
+    const iso=data.datetime||'2026-04-09T20:15';
     setScrimDisplay(iso);
-    // Sync admin editor
     if(iso){
       const [d,t2]=iso.split('T');
-      const di = document.getElementById('adminScrimDate');
-      const ti = document.getElementById('adminScrimTime');
-      if(di) di.value=d;
-      if(ti) ti.value=t2;
+      const di=document.getElementById('adminScrimDate'),ti=document.getElementById('adminScrimTime');
+      if(di)di.value=d;if(ti)ti.value=t2;
       updateEditorPreview(iso);
     }
   });
 }
 
 function updateEditorPreview(iso){
-  const prev = document.getElementById('scrimEditorPreview');
+  const prev=document.getElementById('scrimEditorPreview');
   if(!prev||!iso) return;
-  const [datePart, timePart] = iso.split('T');
-  const [y,mo,d] = datePart.split('-').map(Number);
-  const [hh,mm]  = timePart.split(':').map(Number);
-  const ts = Date.UTC(y,mo-1,d,hh-2,mm,0);
-  const formatted = new Intl.DateTimeFormat('fr-FR',{weekday:'long',day:'2-digit',month:'long',year:'numeric',hour:'2-digit',minute:'2-digit',timeZone:'Europe/Paris'}).format(new Date(ts));
-  prev.textContent = '→ Affiché comme : ' + formatted + ' (CEST)';
+  const [dp,tp]=iso.split('T');
+  const [y,mo,d]=dp.split('-').map(Number);
+  const [hh,mm]=tp.split(':').map(Number);
+  const ts=Date.UTC(y,mo-1,d,hh-2,mm,0);
+  prev.textContent='→ Affiché comme : '+new Intl.DateTimeFormat('fr-FR',{weekday:'long',day:'2-digit',month:'long',year:'numeric',hour:'2-digit',minute:'2-digit',timeZone:'Europe/Paris'}).format(new Date(ts))+' (CEST)';
 }
 
 window.saveScrimDate = async function(){
-  const d = document.getElementById('adminScrimDate').value;
-  const t2= document.getElementById('adminScrimTime').value;
-  if(!d||!t2){ toast('Remplis la date ET l\'heure','fail'); return; }
-  const iso = d+'T'+t2;
-  try {
-    await setDoc(doc(db,'config','scrim'),{datetime:iso},{merge:true});
-    toast('✓ Date du SCRIM mise à jour','ok');
-    updateEditorPreview(iso);
-  } catch { toast('✗ Erreur réseau','fail'); }
+  const d=document.getElementById('adminScrimDate').value;
+  const t2=document.getElementById('adminScrimTime').value;
+  if(!d||!t2){toast("Remplis la date ET l'heure",'fail');return;}
+  try{ await setDoc(doc(db,'config','scrim'),{datetime:d+'T'+t2},{merge:true}); toast('✓ Date du SCRIM mise à jour','ok'); updateEditorPreview(d+'T'+t2); }
+  catch{ toast('✗ Erreur réseau','fail'); }
 };
 
-/* ═══════════ NAV ═══════════ */
-window.showAdminLogin = function(){ showPage('adminlogin'); document.getElementById('hdrPublic').style.display='none'; };
-window.goPublic       = function(){ showPage('public'); document.getElementById('hdrPublic').style.display='flex'; document.getElementById('hdrAdmin').style.display='none'; };
+/* ═══════ NAV ═══════ */
+window.showAdminLogin=function(){showPage('adminlogin');document.getElementById('hdrPublic').style.display='none';};
+window.goPublic=function(){showPage('public');document.getElementById('hdrPublic').style.display='flex';document.getElementById('hdrAdmin').style.display='none';};
 
-window.doLogin = function(){
-  const u=document.getElementById('lu').value.trim();
-  const p=document.getElementById('lp').value;
+window.doLogin=function(){
+  const u=document.getElementById('lu').value.trim(),p=document.getElementById('lp').value;
   const err=document.getElementById('lerr');
   if(u===UNAME&&p===UPASS){
     err.style.display='none';
@@ -584,10 +617,7 @@ window.doLogin = function(){
     document.getElementById('hdrPublic').style.display='none';
     document.getElementById('hdrAdmin').style.display='flex';
     renderAdminAll();
-  } else {
-    err.style.display='block';
-    err.textContent='Identifiants incorrects. Réessayez.';
-  }
+  } else { err.style.display='block'; err.textContent='Identifiants incorrects. Réessayez.'; }
 };
 
 function showPage(name){
@@ -595,7 +625,7 @@ function showPage(name){
   document.getElementById('pg-'+name).classList.add('active');
 }
 
-/* ═══════════ FIREBASE LOBBIES ═══════════ */
+/* ═══════ FIREBASE LOBBIES ═══════ */
 const cache={1:{},2:{}};
 
 function startListeners(){
@@ -608,11 +638,12 @@ function startListeners(){
     },()=>setSyncState('err'));
   });
   listenScrimDate();
+  listenLobbySize();
 }
 
 function setSyncState(s){
   const dot=document.getElementById('syncDot'),txt=document.getElementById('syncTxt');
-  if(!dot) return;
+  if(!dot)return;
   dot.className='sdot'+(s==='saving'?' spin':s==='err'?' bad':'');
   txt.textContent=s==='saving'?'Sauvegarde…':s==='err'?'Erreur réseau':'Synchronisé';
 }
@@ -633,17 +664,22 @@ async function clearAll(){
   setSyncState('saving');
   try{
     const batch=writeBatch(db);
-    [1,2].forEach(lb=>{const e={};for(let i=1;i<=32;i++)e[i]={a:'',b:''};batch.set(doc(db,'lobbies','lobby'+lb),e);});
+    [1,2].forEach(lb=>{
+      const e={};
+      for(let i=1;i<=Math.max(lobbySize[lb],100);i++) e[i]={a:'',b:''};
+      batch.set(doc(db,'lobbies','lobby'+lb),e);
+    });
     await batch.commit();setSyncState('ok');toast('✓ Toutes les inscriptions effacées','ok');
   }catch{setSyncState('err');toast('✗ Erreur réseau','fail');}
 }
 
-/* ═══════════ RENDER PUBLIC ═══════════ */
+/* ═══════ RENDER PUBLIC ═══════ */
 function renderPublicLobby(lb){
   const grid=document.getElementById('pgrid'+lb),stats=document.getElementById('pstats'+lb);
-  if(!grid) return;
+  if(!grid)return;
+  const total=lobbySize[lb];
   let filled=0,full=0,html='';
-  for(let i=1;i<=32;i++){
+  for(let i=1;i<=total;i++){
     const t2=cache[lb][i]||{a:'',b:''};
     const hA=t2.a?.trim(),hB=t2.b?.trim();
     if(hA||hB)filled++;if(hA&&hB)full++;
@@ -652,23 +688,24 @@ function renderPublicLobby(lb){
     html+=`<div class="tcard${cls}"><div class="tcard-head"><span class="tnum">#${i}</span>${badge}</div><div class="tplayers"><div class="tplayer"><span class="plbl">A</span><span class="pname${!hA?' vacant':''}">${hA?esc(t2.a):t('waiting')}</span></div><div class="tplayer"><span class="plbl">B</span><span class="pname${!hB?' vacant':''}">${hB?esc(t2.b):t('waiting')}</span></div></div></div>`;
   }
   grid.innerHTML=html;
-  stats.innerHTML=`<div class="spill"><span class="snum ${full===32?'green':''}">${full}</span>/32 ${t('teamsComplete')}</div><div class="spill"><span class="snum">${filled-full}</span> ${t('teamsIncomplete')}</div><div class="spill"><span class="snum">${32-filled}</span> ${t('teamsLeft')}</div><div class="sync-badge" style="margin-left:auto"><span class="sdot"></span>${t('realtime')}</div>`;
+  stats.innerHTML=`<div class="spill"><span class="snum ${full===total?'green':''}">${full}</span>/${total} ${t('teamsComplete')}</div><div class="spill"><span class="snum">${filled-full}</span> ${t('teamsIncomplete')}</div><div class="spill"><span class="snum">${total-filled}</span> ${t('teamsLeft')}</div><div class="sync-badge" style="margin-left:auto"><span class="sdot"></span>${t('realtime')}</div>`;
 }
 
-/* ═══════════ RENDER ADMIN ═══════════ */
+/* ═══════ RENDER ADMIN ═══════ */
 function renderAdminAll(){[1,2].forEach(l=>renderAdminLobby(l));}
 function renderAdminLobby(lb){
   const grid=document.getElementById('agrid'+lb),stats=document.getElementById('astats'+lb);
-  if(!grid) return;
+  if(!grid)return;
+  const total=lobbySize[lb];
   let filled=0,full=0,html='';
-  for(let i=1;i<=32;i++){
+  for(let i=1;i<=total;i++){
     const t2=cache[lb][i]||{a:'',b:''};
     const hA=t2.a?.trim(),hB=t2.b?.trim();
     if(hA||hB)filled++;if(hA&&hB)full++;
     html+=`<div class="ecard ${hA||hB?'filled':''}" id="ec${lb}_${i}"><div class="ecard-head"><span class="ecard-num">Équipe #${i}</span><button class="btn btn-xs btn-danger" onclick="window._clearTeam(${lb},${i})"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div><div class="ecard-body"><div class="erow"><span class="elbl">A</span><input class="einp" id="ei${lb}_${i}_a" type="text" value="${esc(t2.a||'')}" placeholder="Pseudo joueur A" oninput="window._onInput(${lb},${i},'a',this.value)"></div><div class="erow"><span class="elbl">B</span><input class="einp" id="ei${lb}_${i}_b" type="text" value="${esc(t2.b||'')}" placeholder="Pseudo joueur B" oninput="window._onInput(${lb},${i},'b',this.value)"></div></div></div>`;
   }
   grid.innerHTML=html;
-  stats.innerHTML=`<div class="spill"><span class="snum ${full===32?'green':''}">${full}</span>/32 complètes</div><div class="spill"><span class="snum">${filled-full}</span> incomplètes</div><div class="spill"><span class="snum">${32-filled}</span> libres</div>`;
+  stats.innerHTML=`<div class="spill"><span class="snum ${full===total?'green':''}">${full}</span>/${total} complètes</div><div class="spill"><span class="snum">${filled-full}</span> incomplètes</div><div class="spill"><span class="snum">${total-filled}</span> libres</div>`;
 }
 
 window._onInput=(lb,num,field,val)=>{
@@ -687,7 +724,7 @@ window.openClearAll=()=>{
 };
 window.closeModal=()=>document.getElementById('modal').classList.remove('open');
 
-/* ═══════════ TABS ═══════════ */
+/* ═══════ TABS ═══════ */
 document.querySelectorAll('.tab-btn').forEach(btn=>{
   btn.addEventListener('click',()=>{
     btn.parentElement.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
@@ -699,7 +736,7 @@ document.querySelectorAll('.tab-btn').forEach(btn=>{
   });
 });
 
-/* ═══════════ THEME ═══════════ */
+/* ═══════ THEME ═══════ */
 function setupTheme(btnId){
   const btn=document.getElementById(btnId),r=document.documentElement;
   let d='dark';
@@ -707,16 +744,16 @@ function setupTheme(btnId){
   const moon='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
   if(btn){btn.innerHTML=moon;btn.addEventListener('click',()=>{d=d==='dark'?'light':'dark';r.setAttribute('data-theme',d);document.getElementById('themeBtn').innerHTML=d==='dark'?moon:sun;document.getElementById('themeBtnA').innerHTML=d==='dark'?moon:sun;});}
 }
-setupTheme('themeBtn'); setupTheme('themeBtnA');
+setupTheme('themeBtn');setupTheme('themeBtnA');
 
-/* ═══════════ TOAST ═══════════ */
+/* ═══════ TOAST ═══════ */
 let _tt;
 function toast(msg,type='ok'){const el=document.getElementById('toast');el.textContent=msg;el.className='toast '+type+' show';clearTimeout(_tt);_tt=setTimeout(()=>el.classList.remove('show'),2600);}
 
-/* ═══════════ UTILS ═══════════ */
+/* ═══════ UTILS ═══════ */
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 
-/* ═══════════ INIT ═══════════ */
+/* ═══════ INIT ═══════ */
 document.getElementById('loader').classList.add('gone');
 startListeners();
 </script>
