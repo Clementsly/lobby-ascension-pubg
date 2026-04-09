@@ -465,8 +465,13 @@ window.toggleLang = function(){
   document.getElementById('langBtn').textContent = lang==='fr'?'🇬🇧 EN':'🇫🇷 FR';
   applyTranslations();
   [1,2].forEach(lb=>renderPublicLobby(lb));
+  // Reforater la date du scrim dans la bonne langue
+  if(scrimTimestamp){
+    const opts = {weekday:'long',day:'2-digit',month:'long',year:'numeric',hour:'2-digit',minute:'2-digit',timeZone:'Europe/Paris'};
+    const locale = lang==='fr'?'fr-FR':'en-GB';
+    document.getElementById('scrimDateTxt').textContent = new Intl.DateTimeFormat(locale, opts).format(new Date(scrimTimestamp)) + ' (CEST)';
+  }
 };
-
 /* ═══════════ TIMER ═══════════ */
 let scrimTimestamp = null; // ms UTC
 let timerInterval  = null;
